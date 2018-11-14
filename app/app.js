@@ -32,8 +32,8 @@ app.setHandler({
   },
 
   ArtistIntent: function(artist) {
-    console.log("artist intent for artist " + artist);
-    app.setSessionAttribute("artist", artist);
+    console.log("artist intent for artist " + artist.value);
+    this.setSessionAttribute("artist", artist);
     // look up sk artist id
     let artistsearch = {
       host: "api.songkick.com",
